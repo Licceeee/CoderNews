@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#nav {
+    display: inline-flex;
+    background-color: #1f1f24;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+}
+
+#logo {
+    width: 200px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+}
+
+#search placeholder {
+    color: white;
+}
+
+#search-bar {
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: white;
+}
+
+#search-btn {
+    color: white;
+    background: #ff6600;
+    height: 40px;
+    margin: -2.35rem;
+    border: 1px solid #ff6600;
+    border-radius: 0 5px 5px 0;
+    font-family: "Jost", sans-serif;
+}
+
+#login-btn {
+    color: white;
+    font-family: "Jost", sans-serif;
+    border: 2px solid #ff6600;
+    background-color: #ff6600;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+    transition-delay: 0.2s;
+}
+
+a.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+
+card-span {
+    font-family: "Jost", sans-serif;
+    display: inline-block !important;
+}
+
+
+/* footer */
+
+.footer {
+    padding-top: 2em;
+    text-align: center;
+    background-color: #1f1f24;
+}
+
+.footer-a {
+    margin-right: 2em;
+    font-size: 1em;
+    color: white;
+    letter-spacing: 0.1em;
+    text-decoration-style: none;
+    padding-left: 1.5em;
+    border-left: 6px solid white;
+}
+
+#copyright {
+    padding: 2em 0;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+#guidelines {
+    border: none;
+}
+
+.footer-a:hover {
+    color: #ff6600;
+}
+
+.center {
+    text-align: center;
+}
+
+a.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+
+title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+
+.a-btn {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.a-btn:hover {
+    color: #ff6600;
+}

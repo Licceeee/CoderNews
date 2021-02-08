@@ -1,0 +1,45 @@
+.pagination {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.pagination a {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff6600;
+    font-family: 'Jost', sans-serif;
+}
+.pagination a:focus {
+    outline: none;
+}
+
+.pagination a:first-child,
+.pagination a:last-child {
+    border-style: none;
+}
+
+.pagination .fas {
+    color:#ff6600;
+    font-size: 1.75rem;
+}
+
+.pagination__link {
+    font-weight: bold;
+}
+
+.pagination__link--active a {
+    color: #fff;
+    background: #ff6600;
+}
+
+.pagination__link--active {
+    color: white;
+}
+
+.pagination__link--disabled a {
+    color: rgb(198, 197, 202);
+    border: 1px solid rgb(198, 197, 202);
+}
