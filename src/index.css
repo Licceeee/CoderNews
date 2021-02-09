@@ -144,3 +144,7 @@ title {
 .a-btn:hover {
     color: #ff6600;
 }
+
+.right {
+    text-align: right;
+}

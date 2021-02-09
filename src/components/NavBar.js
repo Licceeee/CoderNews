@@ -29,9 +29,9 @@ const NavBar = ({getSearchInput, search, fetchData}) => {
                             placeholder="Search..."
                             name="searchBar">
                         </input>
-                        <Button id="search-btn" variant="secondary" size="md" className="btn btn-primary col-1">
+                        <button id="search-btn" variant="secondary" size="lg" className="btn btn-primary">
                             <i id="search-icon" className="fas fa-search" onClick={() => fetchData(search)}></i>
-                        </Button>                  
+                        </button>                  
                     </div>
                 </Col>
                 <Button id="login-btn" variant="secondary" size="md" className="btn btn-primary col-1">Log in/Sign in</Button>

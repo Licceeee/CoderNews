@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { Container, Row, Spinner } from 'react-bootstrap';
 
-// TODO import Article from './Article';
+import Article from './Article';
 
 
 const ArticlePage = ({ articleID }) => {
@@ -16,7 +16,6 @@ const ArticlePage = ({ articleID }) => {
           try {
             const response = await fetch(url);
             const jsonRes = await response.json();
-            console.log(jsonRes);
             setIsLoading(false);
             setSingleArticle({...jsonRes});
           } catch (error) {
@@ -40,9 +39,7 @@ const ArticlePage = ({ articleID }) => {
 
                 {!isLoading && 
                 <>
-                    {/* TODO replace with: <Article {...singleArticle}/> */}
-                    <h1>{singleArticle.title}</h1>
-                    <h2>{singleArticle.author}</h2>
+                    <Article {...singleArticle} />
                 </>}
             </Row>
         </Container>
