@@ -14,7 +14,7 @@ const Main = ({data, setArticleID }) => {
 
     const currentPageData = data && data // map over entries and insert cards (paginated)
         .slice(offset, offset + PER_PAGE)
-        .map((entry, i) => {return <MyCard key={entry.objectID} data={entry} setArticleID={setArticleID}/>});
+        .map((entry) => {return <MyCard key={entry.objectID} data={entry} setArticleID={setArticleID}/>});
 
     let pageCount = 0;
     if (data) {
@@ -39,6 +39,7 @@ const Main = ({data, setArticleID }) => {
     return (
         <Container>
             <Row className="m-5 d-flex justify-content-center">
+                {!data && <h1>hahahahah</h1>}
                 {currentPageData}
                 <Col className="col-3 mt-5">
                     <ReactPaginate

@@ -11,7 +11,7 @@ const NavBar = ({getSearchInput, search, fetchData}) => {
 
     return (
         <>
-            <Row id="nav" className="col-12">
+            <Row id="nav" className="col-12 md">
                 <Col className="col-2">
                     <a href="index.html">
                         <Image id="logo" src={process.env.PUBLIC_URL + '/logo.png'} rounded alt="Logo" />

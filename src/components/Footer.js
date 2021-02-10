@@ -29,8 +29,7 @@ const Footer = () => {
           Contact
         </a>
         <Col className="text-md-right" id="copyright">
-          {/* warum funktioniert das text-md-right nicht? */}
-          2021 © Copyright: Emeline, Alicia, Tim {/* was bedeutet diese {" "}? */}
+          2021 © Copyright: Emeline, Alicia, Tim
         </Col>
     </footer>
   );

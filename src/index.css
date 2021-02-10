@@ -67,6 +67,7 @@ code {
 a {
     text-decoration: none;
     color: black;
+    font-size: 1.2rem;
 }
 
 a:hover {
@@ -83,6 +84,25 @@ a.title {
 card-span {
     font-family: "Jost", sans-serif;
     display: inline-block !important;
+}
+
+button.btn.btn-outline-dark {
+    padding: 0.3rem;
+    border-radius: 10px;
+    /* margin-left: 3rem; */
+}
+
+
+/* article */
+
+h4 {
+    font-family: "Jost", sans-serif;
+    padding-bottom: 1.5rem;
+}
+
+p {
+    font-family: "Jost", sans-serif;
+    font-size: 1.15rem;
 }
 
 
