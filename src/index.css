@@ -14,7 +14,7 @@ code {
     background-color: #1f1f24;
     justify-content: space-around;
     align-items: center;
-    height: 120px;
+    min-height: 120px;
 }
 
 #logo {

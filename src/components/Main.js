@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import MyCard from './MyCard';
 import ReactPaginate from 'react-paginate';
 import '../css/pagination.css';
-import { Container, Row, Col, Spinner } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import MySpinner from './MySpinner';
 
 
 const Main = ({data, setArticleID }) => {
-    //  --- PAGINATION --- //
     const [currentPage, setCurrentPage] = useState(0);
-
     const PER_PAGE = 10;
     const offset = currentPage * PER_PAGE;
 
-    const currentPageData = data && data // map over entries and insert cards (paginated)
+    const currentPageData = data && data
         .slice(offset, offset + PER_PAGE)
-        .map((entry) => {return <MyCard key={entry.objectID} data={entry} setArticleID={setArticleID}/>});
+        .map((hit) => {
+            return <MyCard key={hit.objectID} data={hit} setArticleID={setArticleID}/>
+        });
 
     let pageCount = 0;
     if (data) {
@@ -27,19 +28,13 @@ const Main = ({data, setArticleID }) => {
 
     if (!data) {
         return (
-            <Container>
-                <Row className="m-5 d-flex justify-content-center">
-                    <h2 className="center mb-3">Loading ... </h2>
-                    <Spinner animation="grow" />
-                </Row>
-            </Container>
+            <MySpinner />
         )
     }
     
     return (
         <Container>
             <Row className="m-5 d-flex justify-content-center">
-                {!data && <h1>hahahahah</h1>}
                 {currentPageData}
                 <Col className="col-3 mt-5">
                     <ReactPaginate

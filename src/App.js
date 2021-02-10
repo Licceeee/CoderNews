@@ -20,10 +20,11 @@ function App() {
   fetchData.current = async (userInput) => {
     setIsLoading(true);
     setArticleID();
-    let url = `https://hn.algolia.com/api/v1/search_by_date?tags=front_page&hitsPerPage=100`;
-    if (userInput) {
-      url = `https://hn.algolia.com/api/v1/search_by_date?query=${search}&tags=story&hitsPerPage=100`;
-    }
+    let url = ""
+    userInput 
+      ? url = `https://hn.algolia.com/api/v1/search_by_date?query=${search}&tags=story&hitsPerPage=100`
+      : url = `https://hn.algolia.com/api/v1/search_by_date?tags=front_page&hitsPerPage=100`
+
     try {
       const response = await fetch(url);
       if (response.ok) {
@@ -31,7 +32,6 @@ function App() {
         setIsLoading(false);
         res.hits.length === 0 ? setError(true) : setError(false)
         res && setData(res.hits);
-        
       } else {
         throw new Error("Request failed!");
       }
@@ -58,10 +58,11 @@ function App() {
   return (
     <>
       <NavBar getSearchInput={getSearchInput} search={search} fetchData={fetchData.current}/>
-      {!articleID ? 
-          !isLoading ? error ? <ErrorMsg /> : <Main data={data} setArticleID={setArticleID}/>: <MySpinner />
-          : <ArticlePage articleID={articleID}/>}
-      
+      {
+        !articleID ? 
+          !isLoading ? error ? <ErrorMsg msg="No matching entries ... "/> : <Main data={data} setArticleID={setArticleID}/>: <MySpinner />
+          : <ArticlePage articleID={articleID}/>
+      }
       <Footer />
     </>
   );

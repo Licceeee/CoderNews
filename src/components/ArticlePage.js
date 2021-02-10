@@ -29,18 +29,17 @@ const ArticlePage = ({ articleID }) => {
 
     return (
 
-
         <Container>
             <Row className="m-5 d-flex justify-content-center">
-
-            {isLoading && <>
-                <h2 className="center mb-3">Loading ... </h2>
-                <Spinner animation="grow" /> </>}
-
-                {!isLoading && 
-                <>
-                    <Article {...singleArticle} />
-                </>}
+              { isLoading 
+                ? 
+                  <>
+                    <h2 className="center mb-3">Loading ... </h2>
+                    <Spinner animation="grow" /> 
+                  </>
+                :
+                  <Article {...singleArticle} />
+              }
             </Row>
         </Container>
     );
