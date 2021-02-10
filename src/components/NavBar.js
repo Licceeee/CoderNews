@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Image, Button, Container } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 
 const NavBar = ({getSearchInput, search, fetchData}) => {
 
@@ -34,7 +34,7 @@ const NavBar = ({getSearchInput, search, fetchData}) => {
                         </button>                  
                     </div>
                 </Col>
-                <a href="https://tornode.org" id="login-btn" className="col-12 col-md-6 col-lg-3 btn btn-primary m-3 m-sm-0">Get in touch</a>
+                <a href="https://tornode.org" target="_blank" rel="noreferrer" id="login-btn" className="col-12 col-md-6 col-lg-3 btn btn-primary m-3 m-sm-0">Get in touch</a>
             </Row>
             
         </>

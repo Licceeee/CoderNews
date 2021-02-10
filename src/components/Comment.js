@@ -10,7 +10,7 @@ const Comment = ({ comment }) => {
 
     return (
         <>
-            <Container className="shadow-sm border m-md-2">
+            <Container className="shadow-sm m-md-2">
                 <Row className="row p-md-1">
                     <Col className="col-12 col-md-6"><p><b>{comment.author}</b> <small>on {convertTime(comment.created_at)}   
                         <i className="far fa-clock"></i></small></p>

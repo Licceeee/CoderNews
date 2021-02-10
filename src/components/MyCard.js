@@ -17,7 +17,8 @@ const MyCard = ({ data, setArticleID }) => {
                         <Col className="col-12 col-md-6 col-lg-2">{convertDate(data.created_at)}</Col>
                         <Col className="col-12 col-md-6 col-lg-2">{convertTime(data.created_at)}  <i className="far fa-clock"></i></Col>
                         <Col className="col-12 col-md-6 col-lg-2"><button className="btn btn-outline-dark card-span" 
-                                onClick={() => {setArticleID(data.objectID)}} >{data.num_comments} Comments </button>
+                                onClick={() => {setArticleID(data.objectID)}} >
+                                    {data.comments === 0 ? "0" : data.num_comments} Comments </button>
                         </Col>
                     </Row>                    
                 </Card.Body>
