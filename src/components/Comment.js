@@ -20,7 +20,7 @@ const Comment = ({ comment }) => {
                         <span className="card-span m-md-5">  {convertDate(comment.created_at)} </span>
                     </Col>  
                 </Row>
-                <p className="p-0 m-0 p-md-1" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(comment.text)}} />
+                <p className="p-0 m-0 p-md-1" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(comment.text) }} />
             </Container>
             {comment.children && <Comments comments={comment.children}/>}
        </>

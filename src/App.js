@@ -55,14 +55,24 @@ function App() {
     setSearch(target.value);
   }
 
+
+  const conditionalDisplay = () => {
+    if (isLoading) {
+      return <MySpinner />;
+    } else if (error) {
+      return <ErrorMsg msg="No matching entries ... "/>;
+    } else if (articleID) {
+      return <ArticlePage articleID={articleID} />;
+    } else {
+      return <Main data={data} setArticleID={setArticleID} />;
+    }
+  }
+
+
   return (
     <>
       <NavBar getSearchInput={getSearchInput} search={search} fetchData={fetchData.current}/>
-      {
-        !articleID ? 
-          !isLoading ? error ? <ErrorMsg msg="No matching entries ... "/> : <Main data={data} setArticleID={setArticleID}/>: <MySpinner />
-          : <ArticlePage articleID={articleID}/>
-      }
+      {conditionalDisplay()}
       <Footer />
     </>
   );

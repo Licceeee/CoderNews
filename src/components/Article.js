@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from 'react-bootstrap';
 import Comments from './Comments';
 import { convertDate, convertTime} from '../Utils';
+import DOMPurify from 'dompurify';
 
 
 const Article = ({title, url, author, created_at, text, children}) => {
@@ -15,10 +16,12 @@ const Article = ({title, url, author, created_at, text, children}) => {
                     </Card.Subtitle>
                     <span className="card-span m-0 m-md-3 col-12 col-md-6 col-lg-2">{author} </span> 
                     <span className="card-span m-0 m-md-3 col-12 col-md-6 col-lg-2"> {created_at && convertDate(created_at)}  </span>
-                    <span className="card-span m-0 m-md-3 col-12 col-md-6 col-lg-2"> {created_at && convertTime(created_at)}   <i className="far fa-clock"></i> </span>
+                    <span className="card-span m-0 m-md-3 col-12 col-md-6 col-lg-2"> {created_at && convertTime(created_at)}   
+                        <i className="far fa-clock"></i>
+                    </span>
                     <span className="card-span m-0 m-md-3 col-12 col-md-6 col-lg-2"> {children ? children.length : 0} Comments  </span>
 
-                    {text ? <p>{text}</p> : <h6 className="my-5"><a href={url} >{url}</a></h6>}
+                    {text ? <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }} /> : <h6 className="my-5"><a href={url} >{url}</a></h6>}
                     <hr />
                     <h4>Comments</h4>
                     {children && <Comments comments={children} />}               

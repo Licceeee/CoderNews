@@ -143,9 +143,9 @@ p {
     text-align: center;
 }
 
-a.title {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.5rem;
+.custom-icon {
+    color: #ff6600;
+    cursor: pointer;
 }
 
 title {
