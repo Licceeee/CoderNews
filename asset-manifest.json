@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CoderNews/static/css/main.ca94ca3a.chunk.css",
+    "main.js": "/CoderNews/static/js/main.6b37cb8e.chunk.js",
+    "main.js.map": "/CoderNews/static/js/main.6b37cb8e.chunk.js.map",
+    "runtime-main.js": "/CoderNews/static/js/runtime-main.2251e23b.js",
+    "runtime-main.js.map": "/CoderNews/static/js/runtime-main.2251e23b.js.map",
+    "static/js/2.60bda556.chunk.js": "/CoderNews/static/js/2.60bda556.chunk.js",
+    "static/js/2.60bda556.chunk.js.map": "/CoderNews/static/js/2.60bda556.chunk.js.map",
+    "index.html": "/CoderNews/index.html",
+    "static/css/main.ca94ca3a.chunk.css.map": "/CoderNews/static/css/main.ca94ca3a.chunk.css.map",
+    "static/js/2.60bda556.chunk.js.LICENSE.txt": "/CoderNews/static/js/2.60bda556.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2251e23b.js",
+    "static/js/2.60bda556.chunk.js",
+    "static/css/main.ca94ca3a.chunk.css",
+    "static/js/main.6b37cb8e.chunk.js"
+  ]
+}
